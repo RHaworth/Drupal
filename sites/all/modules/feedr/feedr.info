@@ -1,0 +1,9 @@
+name = feedr
+description = RSS feed with different selection criteria from the default
+package = feedr
+core = 7.x
+version = "7.x-1"
+
+; configure = admin/config/front/settings
+
+
