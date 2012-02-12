@@ -1,6 +1,13 @@
 <?php
 
+/**
+ * @file
+ * Provides an RSS feed with a different selection from the default in rss.xml
+ */
 
+/**
+ * Implements hook_menu().
+ */
 function feedr_menu() {
   $items['feedr.xml'] = array(
     'title' => 'RSS feed by RWH',
@@ -11,6 +18,9 @@ function feedr_menu() {
   return $items;
 }
 
+/**
+ * Generates an RSS feed
+ */
 function feedr() {
 
     $nids = db_select('node', 'n')
@@ -25,3 +35,4 @@ function feedr() {
 
     node_feed($nids);
 }
+
